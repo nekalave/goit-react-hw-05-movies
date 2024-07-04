@@ -1,0 +1,25 @@
+.navList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgb(128, 128, 128);
+  height: 50px;
+  align-items: center;
+}
+
+.navItem {
+  color: black;
+  background-color: rgb(128, 128, 128);
+  height: 50%;
+  border-radius: 15px;
+  min-width: 150px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.navItem.active {
+  color: black;
+  background-color: white;
+}
