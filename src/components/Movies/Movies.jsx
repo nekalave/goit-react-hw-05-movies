@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { searchMovies } from '../../services/Api';
 import { NavLink, useLocation, useSearchParams } from 'react-router-dom';
+import css from './Movies.module.css'
 
 
 const Movies = () => {
@@ -43,7 +44,7 @@ const Movies = () => {
       <ul>
         {searchData.map(item => (
           <li key={item.id}>
-            <NavLink to={`${item.id}`} state={{ from: location }}>
+            <NavLink className={css.link} to={`${item.id}`} state={{ from: location }}>
               {item.title}
             </NavLink>
           </li>
