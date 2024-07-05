@@ -11,7 +11,7 @@ const Cast = lazy(() => import('./Cast/Cast'));
 const App = () => {
   return (
     <Routes>
-      <Route path='/goit-react-hw-05-movies' element={<Header />}>
+      <Route path='/goit-react-hw-05-movies/' element={<Header />}>
         <Route index element={<Home />} />
         <Route path='/goit-react-hw-05-movies/movies' element={<Movies />} />
         <Route path='/goit-react-hw-05-movies/movies/:id' element={<MovieDetails />}>
