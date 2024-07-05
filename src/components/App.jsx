@@ -1,20 +1,25 @@
 import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
 import Header from './Header/Header';
-import FeedbackPage from './FeedbackPage/FeedbackPage';
-import { Fragment } from 'react';
-import Home from './Home/Home';
-import PhonebookPage from './PhonebookPage/PhonebookPage';
+
+const Home = lazy(() => import('./Home/Home'));
+const Movies = lazy(() => import('./Movies/Movies'));
+const MovieDetails = lazy(() => import('./MovieDetails/MovieDetails'));
+const Review = lazy(() => import('./Review/Review'));
+const Cast = lazy(() => import('./Cast/Cast'));
 
 const App = () => {
   return (
-    <Fragment>
-      <Header />
-      <Routes>
-        <Route path='/goit-react-hw-02/' element={<Home />} />
-        <Route path='/feedback' element={<FeedbackPage />} />
-        <Route path='/phonebook' element={<PhonebookPage />} />
-      </Routes>
-    </Fragment>
+    <Routes>
+      <Route path='/goit-react-hw-05-movies' element={<Header />}>
+        <Route index element={<Home />} />
+        <Route path='/goit-react-hw-05-movies/movies' element={<Movies />} />
+        <Route path='/goit-react-hw-05-movies/movies/:id' element={<MovieDetails />}>
+          <Route path='cast' element={<Cast />} />
+          <Route path='review' element={<Review />} />
+        </Route>
+      </Route>
+    </Routes>
   );
 };
 

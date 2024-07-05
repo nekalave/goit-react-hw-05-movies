@@ -1,11 +1,13 @@
 .homeSection {
-  background-color: lightgrey;
-  height: 1000px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
 .homeTitle {
   font-size: 96px;
+}
+
+.link {
+  width: max-content;
+  color: black;
 }

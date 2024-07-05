@@ -1,7 +1,6 @@
 .navList {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   gap: 10px;
   background-color: rgb(128, 128, 128);
   height: 50px;

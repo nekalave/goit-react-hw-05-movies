@@ -1,0 +1,26 @@
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailsWrapper {
+ display: flex;
+  flex-direction: row;
+}
+
+.img {
+  width: 200px;
+}
+
+.navWrapper {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+}
+
+.navLink {
+  color: #000;
+  text-decoration: underline;
+}
